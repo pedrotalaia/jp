@@ -1,0 +1,119 @@
+
+// form placeholders
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+// COMEÇO DO FORMULARIO
+
+.Form-Wrapper {
+  flex: 1;
+  line-height: 1.5;
+}
+
+// TITULO DO FORM
+
+.pt-titulo-form {
+  margin-bottom: 20px;
+  width: 100%;
+
+  p {
+    font-size: 12px;
+  }
+
+  @media (max-width: $width-m) {
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
+// LABEL E INPUT
+
+.pt-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .pt-form-hidden {
+    display: none;
+  }
+
+  .pt-formblock{
+    display: block;
+    width: 90%;
+    margin-bottom: 20px;
+    &:last-of-type{
+      padding-bottom: 0;
+    }
+
+    label{
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-align: left;
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .pt-form-erro {
+      //visibility: hidden;
+      color: red;
+      font-size: 10px;
+    }
+
+    input{
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 5px;
+      outline: 0;
+      border: 0;
+      font-size: 12px;
+      background-color: rgba(#fff, .1);
+      color: #fff;
+    }
+
+    @include placeholder{
+      color: rgba(#fff, .25);
+      font-size: 10px;
+    }
+
+    .pt-button{
+      margin-top: 20px;
+    }
+
+    @media (max-width: $width-m) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $width-m) {
+    padding: 20px;
+  }
+}
+
+// BOTÕES DO FORM
+
+.pt-button{
+  height: 35px;
+  min-width: 150px;
+  padding: 0 30px;
+  line-height: 35px;
+  border: 0;
+  outline: 0;
+  background-color: $theme-color;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  &.full-width{
+    display: block;
+    width: 100%;
+  }
+}

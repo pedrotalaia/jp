@@ -1,0 +1,58 @@
+// COMEÇO DO CONTAINER
+
+  .Container {
+    // display: flex;
+    background-image: url(../images/newbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    padding: 70px;
+    width: 100%;
+    color: white;
+    display: flex;
+    text-align: left;
+
+    @media (max-width: $width-m) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    @media (max-width: $width-xs){
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  // LADO ESQUERDO CONTAINER
+  .CallToAction-Heading {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: $width-xs){
+    }
+  }
+
+  .CallToAction-MainContent{
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .CallToAction-Contacto {
+    font-size: 15px;
+  }
+
+  .CallToAction-ContactoLinha{
+    margin: 0;
+  }
+
+  #VinteCinco {
+    color: #4dbce9;
+    font-weight: bold;
+  }
+
+  #EmailTo {
+    color: $theme-color;
+  }

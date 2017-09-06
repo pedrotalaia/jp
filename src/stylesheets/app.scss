@@ -1,0 +1,57 @@
+$theme-color: #4dbce9;
+$width-xl: 1200px;
+$width-m: 900px;
+$width-xs: 660px;
+
+@import "base/header";
+@import "base/container";
+@import "base/form";
+@import "base/project";
+@import "base/footer";
+
+input{
+  border-radius: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  // line-height: 1.5;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+  background-color: $theme-color;
+}
+
+h1 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #FFF;
+  margin: 0;
+
+  @media (max-width: $width-m) {
+    padding-top: 20px;
+  }
+
+}
+
+h3 {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h4 {
+  font-weight: normal;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
