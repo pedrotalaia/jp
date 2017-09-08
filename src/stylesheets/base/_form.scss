@@ -12,30 +12,23 @@
 .Form-Wrapper {
   flex: 1;
   line-height: 1.5;
-}
-
-// TITULO DO FORM
-
-.pt-titulo-form {
-  margin-bottom: 20px;
-  width: 100%;
-
-  p {
-    font-size: 12px;
-  }
 
   @media (max-width: $width-m) {
+    margin-top: 50px;
+  }
+
+  // ALINHAR O H3 AO CENTRO
+  h3 {
     text-align: center;
-    margin-top: 25px;
   }
 }
 
-// LABEL E INPUT
+// TITULO DO FORM + LABEL E INPUT
 
 .pt-form{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 
   .pt-form-hidden {
     display: none;
@@ -73,12 +66,12 @@
       outline: 0;
       border: 0;
       font-size: 12px;
-      background-color: rgba(#fff, .1);
+      background-color: rgba(#fff, .2);
       color: #fff;
     }
 
     @include placeholder{
-      color: rgba(#fff, .25);
+      color: rgba(#fff, 0.25);
       font-size: 10px;
     }
 

@@ -1,7 +1,6 @@
 // COMEÇO DO CONTAINER
 
   .Container {
-    // display: flex;
     background-image: url(../images/newbackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,45 +13,74 @@
     text-align: left;
 
     @media (max-width: $width-m) {
-      flex-wrap: wrap;
+      flex-direction: column;
       width: 100%;
     }
 
-    @media (max-width: $width-xs){
-      flex-wrap: wrap;
-      width: 100%;
+    @media (max-width: $width-xs) {
+      text-align: center;
+      padding: 25px;
     }
   }
 
-  // LADO ESQUERDO CONTAINER
+  // LADO ESQUERDO CONTAINER | TEXTO
   .CallToAction-Heading {
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    @media (max-width: $width-xs){
+    span {
+      font-weight: bold;
+    }
+
+    @media (max-width: $width-m) {
+      text-align: center;
+
+      h1 {
+        margin-bottom: 50px;
+      }
+
+      & > p {
+        margin-bottom: 50px;
+      }
     }
   }
 
   .CallToAction-MainContent{
     font-size: 25px;
     margin: 0;
+    margin-right: 50px;
+
+    @media (max-width: $width-m) {
+      margin: 0;
+    }
+
+    @media (max-width: $width-xs) {
+      margin: 0;
+      font-size: 20px;
+    }
+
   }
 
   .CallToAction-Contacto {
     font-size: 15px;
+
+    @media (max-width: $width-m) {
+      text-align: left;
+    }
+
+    @media (max-width: $width-xs) {
+      font-size: 15px;
+      text-align: center;
+    }
+
   }
 
   .CallToAction-ContactoLinha{
     margin: 0;
   }
 
-  #VinteCinco {
-    color: #4dbce9;
-    font-weight: bold;
-  }
-
-  #EmailTo {
+  .DarCor{
     color: $theme-color;
   }

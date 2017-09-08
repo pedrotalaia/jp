@@ -1,7 +1,7 @@
 $theme-color: #4dbce9;
 $width-xl: 1200px;
 $width-m: 900px;
-$width-xs: 660px;
+$width-xs: 550px;
 
 @import "base/header";
 @import "base/container";
@@ -18,7 +18,6 @@ input{
 * {
   box-sizing: border-box;
   padding: 0;
-  // line-height: 1.5;
 }
 
 body {
@@ -35,10 +34,9 @@ h1 {
   color: #FFF;
   margin: 0;
 
-  @media (max-width: $width-m) {
-    padding-top: 20px;
+  @media (max-width: $width-xs) {
+    font-size: 25px;
   }
-
 }
 
 h3 {
@@ -47,11 +45,10 @@ h3 {
   margin: 0;
 }
 
-h4 {
-  font-weight: normal;
-  margin: 0;
-}
-
 a {
   text-decoration: none;
+
+  &[href^="tel"] {
+    color:inherit;
+  }
 }
