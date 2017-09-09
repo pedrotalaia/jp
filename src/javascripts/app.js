@@ -1,4 +1,3 @@
-import './modules'
 import $ from 'jquery'
 import 'jquery-validation'
 import 'jquery-validation/dist/additional-methods'
