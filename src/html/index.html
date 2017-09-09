@@ -22,7 +22,9 @@
 
   <div class="Container">
     <div class="CallToAction-Heading">
-      <h1>Fisioterapia ao Domicílio</h1>
+      <h1>
+        Fisioterapia ao Domicílio
+      </h1>
 
       <p class="CallToAction-MainContent">A Fisioterapia ao domícilio individualizada ajuda a uma recuperação <span class="DarCor">25%</span> mais rápida.</p>
 
@@ -36,33 +38,43 @@
 
     <div class="Form-Wrapper">
 
-      <form id="formspree" class="pt-form" method="POST" action="https://formspree.io/<josepedrotalaia@gmail.com>">
+      <form id="formspree" class="Form" method="POST" action="https://formspree.io/<josepedrotalaia@gmail.com>">
         <h3>Preencha o formulário para obter mais informações!</h3>
 
         <p>Entraremos em contacto em menos de 24h.</p>
 
-        <input class="pt-form-hidden" name="_gotcha">
+        <input class="Form-Hidden" name="_gotcha">
 
-        <div class="nome pt-formblock">
+        <div class="Form-Block">
           <label for="name">Nome</label>
           <input id="nome" type="name" name="Nome" placeholder="Escreva o seu nome">
         </div>
 
-        <div class="pt-formblock">
-          <label for="email">Email</label>
+        <div class="Form-Block">
+
+          <div class="Form-LabelContainer">
+            <label for="email">Email</label>
+          </div>
           <input class="requiredElements" id="email" type="email" name="email" placeholder="exemplo@email.com">
         </div>
 
-        <div class="pt-formblock">
-          <label for="telefone">Telefone</label>
+        <div class="Form-Block">
+          <div class="Form-LabelContainer">
+            <label for="telefone">Telefone</label>
+          </div>
           <input class="requiredElements" id="telefone" type="tel" name="telefone" placeholder="900 000 000">
         </div>
 
-        <div class="pt-formblock">
-          <button id="submitButton" class="pt-button full-width" type="submit">Enviar</button>
+        <div class="Form-Block">
+          <button id="submitButton" class="Button" type="submit">
+            Enviar
+            <i id="formLoading" class="fa fa-circle-o-notch fa-spin fa-fw fa-1x" aria-hidden="true"></i>
+          </button>
         </div>
 
-        <label id="successLabel" class="pt-form-success pt-form-hidden">Obrigado e até breve!</label>
+        <label id="successLabel" class="Form-Message Form-Hidden">Recebemos o seu contacto, obrigado e até breve!</label>
+
+        <label id="errorLabel" class="Form-Message Form-Hidden">Ocorreu um problema ao enviar o seu contacto, tente de novo.</label>
 
       </form>
 
@@ -95,7 +107,7 @@
     </div>
 
   <footer>
-      JPPhysiocare 2017©
+      JPPhysiocare © 2017
   </footer>
   <script type="text/javascript" src="javascripts/app.js"></script>
 </body>

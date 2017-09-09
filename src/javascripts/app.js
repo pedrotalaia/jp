@@ -1,13 +1,14 @@
 import './modules'
 import $ from 'jquery'
 import 'jquery-validation'
-require("jquery-validation/dist/additional-methods.js")
-
-
+import 'jquery-validation/dist/additional-methods'
 
 $(document).ready( function() {
 
   $('#formspree').validate({
+    errorPlacement: function(error, element) {
+      element[0].previousElementSibling.append(error[0])
+    },
     rules: {
       email: {
         require_from_group: [1, ".requiredElements"],
@@ -32,23 +33,49 @@ $(document).ready( function() {
       }
     },
     submitHandler: function(form) {
-      $('#successLabel').removeClass('pt-form-hidden');
+      $('#submitButton').addClass('disabled');
+      $('#submitButton').attr("disabled", true);
 
-      $('#formspree').submit(function(ev) {
-        ev.preventDefault(ev)
-        
-        $.ajax({
-          url: "https://formspree.io/<josepedrotalaia@gmail.com>",
-          method: "POST",
-          data: {message: "hello!"},
-          dataType: "json",
-          success: function(msg){
-            console.log('sucess:',msg)
-          },
-          error: function(err){
-            console.log('error:',err)
-          }
-        })
+      $('#formLoading').css('visibility', 'visible');
+
+      let dataObj = {};
+
+      if( $('#nome').val()) dataObj.nome = $('#nome').val()
+      if( $('#email').val()) dataObj.email = $('#email').val()
+      if( $('#telefone').val()) dataObj.telefone = $('#telefone').val()
+
+      $.ajax({
+        url: "https://formspree.io/<josepedrotalaia@gmail.com>",
+        method: "POST",
+        data: dataObj,
+        dataType: "json",
+        timeout: 5000,
+        success: function(msg, status, request){
+
+          $('#submitButton').fadeOut(function(){
+            $("#successLabel")
+              .show()
+              .delay(5000)
+              .fadeOut(function(){
+                form.reset();
+                $("#submitButton").fadeIn();
+                $('#submitButton').attr("disabled", false);
+                $('#formLoading').css('visibility', 'hidden');
+              });
+          })
+        },
+        error: function(request, status, error){
+          $('#submitButton').fadeOut(function(){
+            $("#errorLabel")
+              .show()
+              .delay(5000)
+              .fadeOut(function(){
+                $("#submitButton").fadeIn();
+                $('#submitButton').attr("disabled", false);
+                $('#formLoading').css('visibility', 'hidden');
+              });
+          })
+        }
       })
 
     },
