@@ -49,18 +49,19 @@
 
         <div class="pt-formblock">
           <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="exemplo@email.com">
-          <label class="pt-form-erro" for="email">Introduza um E-mail válido</label>
+          <input class="requiredElements" id="email" type="email" name="email" placeholder="exemplo@email.com">
         </div>
 
         <div class="pt-formblock">
           <label for="telefone">Telefone</label>
-          <input id="telefone" type="telefone" name="telefone" placeholder="900 000 000">
+          <input class="requiredElements" id="telefone" type="tel" name="telefone" placeholder="900 000 000">
         </div>
 
         <div class="pt-formblock">
-          <button class="pt-button full-width" type="submit">Enviar</button>
+          <button id="submitButton" class="pt-button full-width" type="submit">Enviar</button>
         </div>
+
+        <label id="successLabel" class="pt-form-success pt-form-hidden">Obrigado e até breve!</label>
 
       </form>
     </div>
