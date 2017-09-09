@@ -1,4 +1,5 @@
 $theme-color: #4dbce9;
+$error-color: #FF5555;
 $width-xl: 1200px;
 $width-m: 900px;
 $width-xs: 550px;
@@ -8,6 +9,8 @@ $width-xs: 550px;
 @import "base/form";
 @import "base/project";
 @import "base/footer";
+
+@import "font-awesome/scss/font-awesome";
 
 input{
   border-radius: 0;
