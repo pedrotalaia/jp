@@ -1,8 +1,26 @@
+
 header {
   background-color: white;
   color: black;
   padding: 20px;
   border-bottom: 100px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+#logo-color-blue {
+  color: $theme-color;
+  font-weight: bold;
+}
+
+#logo-color-black {
+  margin-left: 3px;
+  margin-right: 5px;
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 
 .logo {

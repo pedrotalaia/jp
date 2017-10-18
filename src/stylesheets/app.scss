@@ -12,21 +12,22 @@ $width-xs: 550px;
 
 @import "font-awesome/scss/font-awesome";
 
-input{
-  border-radius: 0;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
 
 * {
   box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 body {
   font-size: 15px;
   font-family: 'Arial', sans-serif;
   background-color: $theme-color;
+}
+
+input{
+  border-radius: 0;
 }
 
 h1 {
